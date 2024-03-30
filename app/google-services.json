@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "816100000807",
+    "project_id": "e-commerce-cc5c1",
+    "storage_bucket": "e-commerce-cc5c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816100000807:android:ada8ec91a046cfec147a02",
+        "android_client_info": {
+          "package_name": "com.vedat.e_commerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxoPE1p_rjw0mEiZgLStWH8b972BE3eWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
