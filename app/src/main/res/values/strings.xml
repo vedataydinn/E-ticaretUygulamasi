@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">kelineYt</string>
     <string name="title_activity_shopping">Alışveriş Sayfası</string>
-    <string name="rightAddress">The Right Address\nFor Shopping\nAnyday</string>
-    <string name="quality">It is now very easy to reach the\nbest quality among the\nproducts on the internet!</string>
+    <string name="rightAddress">Alısveris için\nHer zaman\nDogru adres</string>
+    <string name="quality">internetteki en iyi urunlere\nulasmak \nArtık cok kolay!</string>
     <string name="first_fragment_label">İlk Fragment Başlığı</string>
     <string name="second_fragment_label">İkinci Fragment Başlığı</string>
 </resources>
