@@ -8,6 +8,7 @@
 
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -21,12 +22,12 @@
         android:id="@+id/ellipse"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="@id/guidelineEllipseLeft"
-        app:layout_constraintEnd_toEndOf="@id/guidelineEllipseRight"
-        app:layout_constraintTop_toTopOf="@id/guidelineEllipseTop"
-        app:layout_constraintBottom_toBottomOf="@id/guidelineEllipseBottom"
         android:background="@drawable/ellips"
-        app:layout_constraintDimensionRatio="1:1"/>
+        app:layout_constraintBottom_toBottomOf="@id/guidelineEllipseBottom"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEllipseRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineEllipseLeft"
+        app:layout_constraintTop_toTopOf="@id/guidelineEllipseTop" />
 
     <TextView
         android:id="@+id/tvRightAdressForShopping"
@@ -50,11 +51,12 @@
         android:gravity="center"
         android:text="@string/quality"
         android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="@id/tvRightAdressForShopping"
         app:layout_constraintEnd_toEndOf="@id/tvRightAdressForShopping"
+        app:layout_constraintStart_toStartOf="@id/tvRightAdressForShopping"
         app:layout_constraintTop_toBottomOf="@id/tvRightAdressForShopping" />
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -65,15 +67,15 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton"
         style="@style/blueButtonStyle"
         android:layout_width="130dp"
         android:layout_height="55dp"
-        app:layout_constraintTop_toBottomOf="@id/tvQuality"
-        app:layout_constraintStart_toStartOf="@id/tvQuality"
-        app:layout_constraintEnd_toEndOf="@id/tvQuality"
+        android:text="start"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:text="start"/>
-
+        app:layout_constraintEnd_toEndOf="@id/tvQuality"
+        app:layout_constraintStart_toStartOf="@id/tvQuality"
+        app:layout_constraintTop_toBottomOf="@id/tvQuality" />
 
 
     <androidx.constraintlayout.widget.Guideline

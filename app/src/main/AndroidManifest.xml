@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools" >
 
     <application
+        android:name=".ecommerceAplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -18,7 +19,7 @@
             android:label="@string/title_activity_shopping"
             android:theme="@style/Theme.Ecommerce" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.loginRegisterActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Ecommerce" >
