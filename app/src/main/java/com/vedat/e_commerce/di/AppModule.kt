@@ -1,6 +1,8 @@
 package com.vedat.e_commerce.di
 
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,10 +13,14 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-
+/*
     @Provides
     @singleton
     fun provideFirebaseAuth() = FirebaseAuth.getInstance()
+*/
+    @Provides
+    @Singleton
+    fun providerFirebaseFirebaseDatebase()= Firebase.firestore
 }
 
 annotation class singleton
