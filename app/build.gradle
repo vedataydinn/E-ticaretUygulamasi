@@ -1,3 +1,5 @@
+
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
@@ -9,12 +11,12 @@ plugins {
 
 android {
     namespace 'com.vedat.e_commerce'
-    compileSdk 34
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.vedat.e_commerce"
         minSdk 24
-        targetSdk 33
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
