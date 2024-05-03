@@ -15,5 +15,5 @@ dependencyResolutionManagement {
        jcenter()
     }
 }
-rootProject.name = "KelineYt"
+rootProject.name = "ecommerce"
 include ':app'
