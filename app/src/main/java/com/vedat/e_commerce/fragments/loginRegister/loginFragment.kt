@@ -15,9 +15,12 @@ import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.vedat.e_commerce.activities.ShoppingActivity
+import com.vedat.e_commerce.dialog.setupBottomSheetDialog
 import com.vedat.e_commerce.util.Resource
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class LoginFragment : Fragment(R.layout.fragment_login) {
@@ -50,35 +53,64 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
 
 
+       binding.tvParolamUnuttum.setOnClickListener{
+           setupBottomSheetDialog { email ->
+               viewModel.resetPassword(email)
 
+           }
+       }
 
+        lifecycleScope.launchWhenStarted{
+            viewModel.resetPassword.collect{
 
-
-        lifecycleScope.launchWhenStarted {
-            viewModel.login.collect {
                 when (it) {
                     is Resource.Loading -> {
-                        binding.buttonLoginLogin.startAnimation()
+
                     }
 
-                    is Resource.Success -> {
-                        binding.buttonLoginLogin.revertAnimation()
-                        Intent(requireActivity(),ShoppingActivity::class.java).also{ intent ->
-                            intent.addFlags(intent.FLAG_ACTİVİTY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-                            startActivity(intent)
+                    is Resource.Success-> {
+                        Snackbar.make(requireView(),"resetleme bağlantısı e-postanıza gönderildi",Snackbar.LENGTH_LONG).show()
                         }
                     }
 
                     is Resource.Error -> {
-                        Toast.makeText((requireContext(),it.message ,Toast.LENGTH_LONG).show())
-                        binding.buttonLoginLogin.revertAnimation()
-
+                        Snackbar.make((requireView(),"hata: ${it.message}",Snackbar.LENGTH_LONG).show()
                     }
 
                     else -> Unit
                 }
+
+            }
+
+
+
+
+        lifecycleScope.launchWhenStarted
+    {
+        viewModel.login.collect {
+            when (it) {
+                is Resource.Loading -> {
+                    binding.buttonLoginLogin.startAnimation()
+                }
+
+                is Resource.Success -> {
+                    binding.buttonLoginLogin.revertAnimation()
+                    Intent(requireActivity(), ShoppingActivity::class.java).also { intent ->
+                        intent.addFlags(intent.FLAG_ACTİVİTY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                        startActivity(intent)
+                    }
+                }
+
+                is Resource.Error -> {
+                    Toast.makeText((requireContext(), it.message, Toast.LENGTH_LONG).show())
+                    binding.buttonLoginLogin.revertAnimation()
+
+                }
+
+                else -> Unit
             }
         }
+    }
     }
 
 }
