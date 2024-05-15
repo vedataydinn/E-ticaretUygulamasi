@@ -1,44 +1,51 @@
 package com.vedat.e_commerce.activities
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.vedat.e_commerce.R
 import com.vedat.e_commerce.databinding.ActivityShoppingBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ShoppingActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
-private lateinit var binding: ActivityShoppingBinding
+    val binding by lazy {
+        ActivityShoppingBinding.inflate(layoutInflater)
+    }
+
+    val viewModel by viewModels<CartViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        WindowCompat.setDecorFitsSystemWindows(window, false)
         super.onCreate(savedInstanceState)
+        setContentView(binding.root)
 
-     binding = ActivityShoppingBinding.inflate(layoutInflater)
-     setContentView(binding.root)
+        val navController = findNavController(R.id.shoppingHostFragment)
+        binding.bottomNavigation.setupWithNavController(navController)
 
-        setSupportActionBar(binding.toolbar)
-
-        val navController = findNavController(R.id.nav_host_fragment_content_shopping)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAnchorView(R.id.fab)
-                    .setAction("Action", null).show()
+        lifecycleScope.launchWhenStarted {
+            viewModel.cartProducts.collectLatest {
+                when (it) {
+                    is Resource.Success -> {
+                        val count = it.data?.size ?: 0
+                        val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottomNavigation)
+                        bottomNavigation.getOrCreateBadge(R.id.cartFragment).apply {
+                            number = count
+                            backgroundColor = resources.getColor(R.color.g_blue)
+                        }
+                    }
+                    else -> Unit
+                }
+            }
         }
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-    val navController = findNavController(R.id.nav_host_fragment_content_shopping)
-    return navController.navigateUp(appBarConfiguration)
-            || super.onSupportNavigateUp()
-    }
 }

@@ -11,12 +11,12 @@ plugins {
 
 android {
     namespace 'com.vedat.e_commerce'
-    compileSdkPreview kotlin_version
+    compileSdk 34// veya herhangi başka geçerli bir Android API seviyesi
 
     defaultConfig {
         applicationId "com.vedat.e_commerce"
-        minSdk 24
-        targetSdk 31
+        minSdk 26
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
