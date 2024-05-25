@@ -10,9 +10,8 @@ import com.vedat.e_commerce.R
 fun Fragment.setupBottomSheetDialog(
     onSendClick: (String) -> Unit
 ){
-
-    val dialog = BottomSheetDialog(requireContext(), R.style.DialogStyle)
-    val view = layoutInflater.inflate(R.layout.reset_password_dialog,null)
+    val dialog = BottomSheetDialog(requireContext(),R.style.DialogStyle)
+    val view = layoutInflater.inflate(R.layout.reset_passowrd_dialog,null)
     dialog.setContentView(view)
     dialog.behavior.state = BottomSheetBehavior.STATE_EXPANDED
     dialog.show()
@@ -30,5 +29,4 @@ fun Fragment.setupBottomSheetDialog(
     buttonCancel.setOnClickListener {
         dialog.dismiss()
     }
-
 }

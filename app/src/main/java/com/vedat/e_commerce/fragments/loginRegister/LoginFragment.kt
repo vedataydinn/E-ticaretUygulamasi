@@ -26,6 +26,8 @@ import kotlinx.coroutines.launch
 
 
 
+
+
 @AndroidEntryPoint
 class LoginFragment : Fragment(R.layout.fragment_login) {
     private lateinit var binding: FragmentLoginBinding
@@ -55,7 +57,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             }
         }
 
-        binding.tvParolamUnuttum.setOnClickListener {
+        binding.tvForgotPasswordLogin.setOnClickListener {
             setupBottomSheetDialog { email ->
                 viewModel.resetPassword(email)
             }
@@ -67,10 +69,10 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                     is Resource.Loading -> {
                     }
                     is Resource.Success -> {
-                        Snackbar.make(requireView(),"Reset link was sent to your email",Snackbar.LENGTH_LONG).show()
+                        Snackbar.make(requireView(),"Sıfırlama linki Email'inize gönderildi",Snackbar.LENGTH_LONG).show()
                     }
                     is Resource.Error -> {
-                        Snackbar.make(requireView(),"Error: ${it.message}",Snackbar.LENGTH_LONG).show()
+                        Snackbar.make(requireView(),"Hata: ${it.message}",Snackbar.LENGTH_LONG).show()
                     }
                     else -> Unit
 
@@ -101,4 +103,5 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             }
         }
     }
+
 }
