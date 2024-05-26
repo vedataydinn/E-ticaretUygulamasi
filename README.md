@@ -7,4 +7,7 @@ giriş ekranı oluşturuldu
 
 <img width="176" alt="image" src="https://github.com/vedataydinn/Mobil_E-ticaretUygulamasi/assets/163201453/1e5be11b-ce01-48f9-ae37-593c08d22396">
 
+<img width="180" alt="image" src="https://github.com/vedataydinn/Mobil_E-ticaretUygulamasi/assets/163201453/b4593057-626b-422d-aa31-871e3369fef5">
+
+
 
