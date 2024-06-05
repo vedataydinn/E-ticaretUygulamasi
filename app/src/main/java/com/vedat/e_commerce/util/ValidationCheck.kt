@@ -2,19 +2,22 @@ package com.vedat.e_commerce.util
 
 import android.util.Patterns
 
-fun validateEmail(email:String):RegisterValidation{
+fun validateEmail(email: String): RegisterValidation{
     if (email.isEmpty())
-        return RegisterValidation.Failed("email bos Gecilemez")
-    if(!Patterns.EMAIL_ADDRESS.matcher(email).matches())
-        return RegisterValidation.Failed("yanlış email ,sıfırla")
+        return RegisterValidation.Failed("Email Boş geçilemez")
+
+    if (!Patterns.EMAIL_ADDRESS.matcher(email).matches())
+        return RegisterValidation.Failed("yanlış Email")
 
     return RegisterValidation.Success
 }
 
-fun validationPassword(password:String):RegisterValidation{
-    if(password.isEmpty())
-        return RegisterValidation.Failed("Sifre bos olmamalı")
-    if(password.length<6)
-        return RegisterValidation.Failed("sifre 6 haneli olmalı")
+fun validatePassword(password: String): RegisterValidation{
+    if (password.isEmpty())
+        return RegisterValidation.Failed("Şifre Boş Geçilemez")
+
+    if (password.length < 6)
+        return RegisterValidation.Failed("Şifre 6 haneden daha az olmamalı")
+
     return RegisterValidation.Success
 }
