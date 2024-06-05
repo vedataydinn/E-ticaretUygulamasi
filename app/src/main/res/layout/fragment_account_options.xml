@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -14,74 +13,74 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/tvAppName"
-            style="@style/h3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:gravity="center"
-            android:text="eniyisi."
-            android:textStyle="bold"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+
 
         <TextView
-            android:id="@+id/tvRightAdressForShopping"
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h3"
+            android:layout_marginTop="120dp"
+            android:drawableStart="@drawable/ic_kleine_shape"
+            android:drawablePadding="6dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Kalitex."/>
+
+        <TextView
+            android:id="@+id/tvRightAddressForShopping"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/h4"
-            android:layout_marginTop="52dp"
-            android:text="@string/rightAddress"
+            android:layout_marginTop="45dp"
+            app:layout_constraintTop_toBottomOf="@id/tvAppName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Alısveris için Herzaman Dogru Adres"
             android:textAlignment="center"
             android:gravity="center"
             android:textSize="35sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvAppName" />
+            />
 
         <TextView
             android:id="@+id/tvQuality"
-            style="@style/h2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:gravity="center"
-            android:text="@string/quality"
+            style="@style/h2"
+            app:layout_constraintStart_toStartOf="@id/tvRightAddressForShopping"
+            app:layout_constraintEnd_toEndOf="@id/tvRightAddressForShopping"
+            app:layout_constraintTop_toBottomOf="@id/tvRightAddressForShopping"
             android:textAlignment="center"
-            app:layout_constraintStart_toStartOf="@id/tvRightAdressForShopping"
-            app:layout_constraintEnd_toEndOf="@id/tvRightAdressForShopping"
-            app:layout_constraintTop_toBottomOf="@id/tvRightAdressForShopping"
-            app:layout_constraintHorizontal_bias="0.5" />
+            android:gravity="center"
+            android:text="kaliteli ve daha uygun urunlere daha ucuz fiyatlarla sahip olun"
+            android:layout_marginTop="15dp"
+            />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonRegisterAccountOptions"
-            style="@style/blueButtonStyle"
             android:layout_width="@dimen/mediumButtonWidth"
             android:layout_height="@dimen/mediumButtonHeight"
-            android:layout_marginTop="64dp"
-            android:background="#3F51B5"
-            android:text="Kayıt ol"
-            android:textAlignment="center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvQuality" />
+            style="@style/blueButtonStyle"
+            app:layout_constraintTop_toBottomOf="@id/tvQuality"
+            app:layout_constraintStart_toStartOf="@id/tvQuality"
+            app:layout_constraintEnd_toEndOf="@id/tvQuality"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Kayıt ol"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonLoginAccountOptions"
             style="@style/whiteButtonStyle"
             android:layout_width="@dimen/mediumButtonWidth"
             android:layout_height="@dimen/mediumButtonHeight"
-            android:layout_marginTop="8dp"
             android:text="Giriş yap"
-            android:textAlignment="center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/buttonRegisterAccountOptions" />
-
+            app:layout_constraintEnd_toEndOf="@id/tvQuality"
+            app:layout_constraintStart_toStartOf="@id/tvQuality"
+            app:layout_constraintTop_toBottomOf="@+id/buttonRegisterAccountOptions"
+            android:layout_marginTop="10dp"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>
