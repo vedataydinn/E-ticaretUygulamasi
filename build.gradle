@@ -1,25 +1,17 @@
 buildscript {
-    ext {
-        kotlin_version = '1.6.21' // Kotlin sürümünü güncelledik
-    }
     dependencies {
         classpath 'com.google.dagger:hilt-android-gradle-plugin:2.40.1'
         classpath 'com.google.gms:google-services:4.3.13'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         def nav_version = "2.5.0"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
     }
-    repositories {
-        mavenCentral()
-
-    }
 }
 
 plugins {
-    id 'com.android.application' version '8.0.0' apply false // AGP sürümünü uyumlu bir sürüme düşürdük
-    id 'com.android.library' version '8.0.0' apply false // AGP sürümünü uyumlu bir sürüme düşürdük
-    id 'org.jetbrains.kotlin.android' version '1.6.21' apply false // Kotlin sürümünü güncelledik
+    id 'com.android.application' version '7.3.0' apply false
+    id 'com.android.library' version '7.3.0' apply false
+    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
 }
 
 task clean(type: Delete) {
