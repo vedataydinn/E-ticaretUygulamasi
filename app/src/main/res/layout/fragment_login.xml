@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,13 +20,12 @@
             android:layout_height="wrap_content"
             style="@style/h3"
             android:layout_marginTop="110dp"
-            android:drawableStart= "@drawable/ic_kleine_shape"
+            android:drawableStart="@drawable/ic_kleine_shape"
             android:drawablePadding="6dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="eniyisi."/>
-
+            android:text="Kalitex"/>
 
         <TextView
             android:id="@+id/tvLetsLogin"
@@ -37,10 +35,11 @@
             android:layout_marginTop="15dp"
             app:layout_constraintTop_toBottomOf="@id/tvAppName"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
-            android:text="Giriş Yap"
+            android:text="Giriş yap"
             android:textAlignment="center"
             android:gravity="center"
-            android:textSize="35sp" />
+            android:textSize="35sp"
+            />
 
         <TextView
             android:id="@+id/tvDontHaveAccount"
@@ -51,36 +50,35 @@
             app:layout_constraintTop_toBottomOf="@id/tvLetsLogin"
             android:textAlignment="center"
             android:gravity="center"
-            android:text="Bir Hesabın var mı ? Kayıt Ol" />
-
+            android:text="Bir hesabın yokmu,kayıt ol"
+            />
 
         <EditText
             android:id="@+id/edEmailLogin"
-            style="@style/editText"
             android:layout_width="0dp"
             android:layout_height="@dimen/edittextHeight"
-            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/tvDontHaveAccount"
+            style="@style/editText"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
-            app:layout_constraintTop_toBottomOf="@id/tvDontHaveAccount" />
+            android:layout_marginTop="50dp"/>
 
         <EditText
             android:id="@+id/edPasswordLogin"
-            style="@style/editText"
             android:layout_width="0dp"
             android:layout_height="@dimen/edittextHeight"
-            android:layout_marginTop="15dp"
-            android:hint="Şifre"
-            android:inputType="textPassword"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
-            app:layout_constraintTop_toBottomOf="@id/edEmailLogin" />
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/edEmailLogin"
+            style="@style/editText"
+            android:hint="Sifre"
+            android:inputType="textPassword"
+            android:layout_marginTop="15dp"/>
 
         <TextView
-            android:id="@+id/tvParolamıUnuttum"
+            android:id="@+id/tvForgotPasswordLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/h2"
@@ -88,8 +86,9 @@
             app:layout_constraintTop_toBottomOf="@id/edPasswordLogin"
             android:textAlignment="center"
             android:gravity="center"
-            android:text="Parolamı Unuttum"
-            android:textColor="@color/black"/>
+            android:text="Sifremi unuttum"
+            android:textColor="@color/black"
+            />
 
         <ImageView
             android:id="@+id/facebookLogin"
@@ -109,15 +108,14 @@
             app:layout_constraintBottom_toBottomOf="@id/facebookLogin"
             app:layout_constraintEnd_toEndOf="@id/facebookLogin"/>
 
-
         <ImageView
             android:id="@+id/googleLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="13dp"
-            android:src="@drawable/google_login"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/buttonLoginLogin" />
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/buttonLoginLogin"
+            android:src="@drawable/google_login"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -129,35 +127,32 @@
             app:layout_constraintEnd_toEndOf="@id/googleLogin"/>
 
 
-
-        <androidx.appcompat.widget.AppCompatButton
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonLoginLogin"
-            style="@style/blueButtonStyle"
             android:layout_width="0dp"
             android:layout_height="@dimen/mediumButtonHeight"
-            android:layout_marginTop="15dp"
-            android:text="Giriş"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/blueButtonStyle"
+            app:layout_constraintTop_toBottomOf="@id/tvForgotPasswordLogin"
             app:layout_constraintStart_toStartOf="@id/guidelineLoginLeft"
-            app:layout_constraintTop_toBottomOf="@id/tvParolamıUnuttum" />
-
-
-
+            app:layout_constraintEnd_toEndOf="@id/guidelineLoginRight"
+            android:layout_marginTop="15dp"
+            android:text="Giriş Yap"
+            app:spinning_bar_color="@color/white"/>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineLoginLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="32dp" />
+            app:layout_constraintGuide_percent="0.09" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineLoginRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="32dp" />
-
+            app:layout_constraintGuide_percent="0.91" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </FrameLayout>
