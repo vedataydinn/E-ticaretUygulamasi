@@ -1,5 +1,5 @@
-giriş ekranı oluşturul
-uygulamaının youtubedaki anlatı linki 
+
+Uygulamanın youtubedaki anlatı linki 
 https://www.youtube.com/watch?v=cOc-uwa4WkM
 
 
