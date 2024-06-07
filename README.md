@@ -1,4 +1,6 @@
-giriş ekranı oluşturuldu
+giriş ekranı oluşturul
+uygulamaının youtubedaki anlatı linki 
+https://www.youtube.com/watch?v=cOc-uwa4WkM
 
 <img width="179" alt="image" src="https://github.com/vedataydinn/E-ticaretUygulamasi/assets/163201453/941b0b87-1ad4-42de-8732-fa5b5e7f106a">
 
