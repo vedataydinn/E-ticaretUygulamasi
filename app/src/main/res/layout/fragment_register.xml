@@ -14,19 +14,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tvAppName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/h3"
-            android:layout_marginTop="50dp"
-            android:drawableStart="@drawable/ic_kleine_shape"
-            android:drawablePadding="6dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="eniyisi."/>
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/h3"
+        android:layout_marginTop="50dp"
+        android:drawableStart="@drawable/ic_kleine_shape"
+        android:drawablePadding="6dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Kalitex"/>
 
 
         <TextView
@@ -54,7 +54,7 @@
             app:layout_constraintEnd_toEndOf="@id/tvLetsRegister"
             android:textAlignment="center"
             android:gravity="center"
-            android:text="bir Hesabınız var mı? giriş yap"
+            android:text="Bir hesabın varmı ,giris yap"
             />
 
         <EditText
@@ -65,7 +65,7 @@
             app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
             app:layout_constraintTop_toBottomOf="@id/tvDoYouHaveAccount"
             style="@style/editText"
-            android:hint="Ad"
+            android:hint="isim"
             android:layout_marginTop="50dp"/>
 
         <EditText
@@ -76,7 +76,7 @@
             app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
             app:layout_constraintTop_toBottomOf="@id/edFirstNameRegister"
             style="@style/editText"
-            android:hint="Soyad"
+            android:hint="soyisim"
             android:layout_marginTop="10dp"/>
 
         <EditText
@@ -99,7 +99,7 @@
             app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
             app:layout_constraintTop_toBottomOf="@id/edEmailRegister"
             style="@style/editText"
-            android:hint="Şifre"
+            android:hint="Sifre"
             android:inputType="textPassword"
             android:layout_marginTop="10dp"/>
 
@@ -112,8 +112,7 @@
             app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
             app:layout_constraintEnd_toEndOf="@id/guidelineRegisterRight"
             android:layout_marginTop="15dp"
-            android:text="kayıt ol"
-            android:textAlignment="center"
+            android:text="Kayıt ol"
             app:spinning_bar_color="@color/white"/>
 
         <ImageView
@@ -153,19 +152,19 @@
             app:layout_constraintBottom_toBottomOf="@id/googleRegister"
             app:layout_constraintEnd_toEndOf="@id/googleRegister"/>
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guidelineRegisterLeft"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.09" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRegisterLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.09" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guidelineRegisterRight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.91" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRegisterRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.91" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
