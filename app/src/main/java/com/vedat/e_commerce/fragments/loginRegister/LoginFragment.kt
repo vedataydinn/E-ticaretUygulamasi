@@ -6,13 +6,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.vedat.e_commerce.R
 import com.vedat.e_commerce.databinding.FragmentLoginBinding
-import com.vedat.e_commerce.viewmodel.LoginViewModel
-import java.util.zip.Inflater
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
@@ -22,10 +19,6 @@ import com.vedat.e_commerce.activities.ShoppingActivity
 import com.vedat.e_commerce.dialog.setupBottomSheetDialog
 import com.vedat.e_commerce.util.Resource
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
-
-
-
 
 
 @AndroidEntryPoint
