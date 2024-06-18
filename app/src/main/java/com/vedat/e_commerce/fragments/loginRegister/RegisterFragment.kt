@@ -14,7 +14,6 @@ import com.vedat.e_commerce.data.User
 import com.vedat.e_commerce.databinding.FragmentRegisterBinding
 import com.vedat.e_commerce.util.RegisterValidation
 import com.vedat.e_commerce.util.Resource
-import com.vedat.e_commerce.util.validateEmail
 import com.vedat.e_commerce.viewmodel.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
